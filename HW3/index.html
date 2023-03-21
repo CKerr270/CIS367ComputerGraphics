@@ -99,6 +99,13 @@
         boxes.push(boxMesh);
     }
 
+    //add a torus
+    const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
+    const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+    const torus = new THREE.Mesh( geometry, material );
+    scene.add( torus );
+    torus.position.set(2,7,-2)
+
     // Add the Lights
     // Ambient light is used to prevent the scene
     // from ever being too dark.
