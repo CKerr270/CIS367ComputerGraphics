@@ -136,6 +136,8 @@
         for(let i = 0; i < boxes.length; i++) {
             boxes[i].rotateX(Math.PI/(100+i));
         }
+        torus.rotateX(Math.PI/100);
+        torus.rotateY(Math.PI/101);
         requestAnimationFrame( animate );
         renderer.render( scene, camera );
         controls.update();
