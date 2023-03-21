@@ -11,8 +11,8 @@ var points;
 
 var colors = [
   vec3(1.0,0.0,0.0),
-  vec3(0.0,1.0,0.5),
-  vec3(0.0,0.0,0.5),
+  // vec3(0.0,1.0,0.5),
+  // vec3(0.0,0.0,0.5),
 ];
 
 // This function executes our WebGL code AFTER the window is loaded.
