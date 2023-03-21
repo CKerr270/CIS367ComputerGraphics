@@ -21,15 +21,19 @@
 
   <script type="module">
     import * as THREE from 'three';
+    import { OrbitControls } from "https://unpkg.com/three@latest/examples/jsm/controls/OrbitControls.js";
     const scene = new THREE.Scene();
     let boxes = [];
     const fov = 100;
     const near = 0.1;
-    const far = 10;
+    const far = 100;
     const camera = new THREE.PerspectiveCamera( fov, window.innerWidth / window.innerHeight, near, far );
 
     const renderer = new THREE.WebGLRenderer();
 
+    const controls = new OrbitControls( camera, renderer.domElement);
+    camera.position.set( 2,4,-2);
+    controls.update();
     // Load Textures
     let floorWidth = 20;
     let floorHeight = 40;
@@ -127,6 +131,7 @@
         }
         requestAnimationFrame( animate );
         renderer.render( scene, camera );
+        controls.update();
     }
     animate();
 
